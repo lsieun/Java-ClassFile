@@ -16,6 +16,9 @@ create table `dict_structure`(
   `name` VARCHAR(20) NOT NULL
 );
 
-
+CREATE TABLE `biz_opcode` (
+  `id` INT PRIMARY KEY,
+  `name` VARCHAR(20) NOT NULL
+);
 
 
