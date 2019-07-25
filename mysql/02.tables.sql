@@ -21,4 +21,19 @@ CREATE TABLE `biz_opcode` (
   `name` VARCHAR(20) NOT NULL
 );
 
+CREATE TABLE `biz_instruction` (
+  `id` INT PRIMARY KEY AUTO_INCREMENT,
+  `name` VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE `biz_instruction_code` (
+  `id` INT PRIMARY KEY AUTO_INCREMENT,
+  `instruction` VARCHAR(30) NOT NULL,
+  `opcode` VARCHAR(20) NOT NULL,
+  UNIQUE KEY `biz_instruction_code_uk` (`instruction`,`opcode`)
+);
+
+SHOW CREATE TABLE `biz_instruction_code`;
+
+
 
