@@ -12,7 +12,7 @@ method_info {
 }
 ```
 
-If the method is either `native` or `abstract` , and is not **a class or interface initialization method**, then its `method_info` structure must not have a `Code` attribute in its attributes table<sub>【注：说明没有Code的情况】</sub>. Otherwise, its `method_info` structure must have **exactly one** `Code` attribute in its attributes table<sub>【注：说明两者数量关系】</sub>.
+If the method is either `native` or `abstract` , and is not **a class or interface initialization method**, then its `method_info` structure must not have a `Code` attribute in its attributes table<sub>【注：说明没有Code的情况】</sub>. Otherwise, its `method_info` structure must have **exactly one** `Code` attribute in its attributes table<sub>【注：说明两者的数量关系，至多有一个Code属性】</sub>.
 
 A `Code` attribute contains the Java Virtual Machine instructions and auxiliary information for a method, including an instance initialization method and a class or interface initialization method<sub>【注：这段我不懂在说什么】</sub>.
 

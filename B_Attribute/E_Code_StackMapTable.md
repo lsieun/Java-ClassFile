@@ -8,8 +8,8 @@
 - [2. Position](#2-position)
 - [3. StackMapTable_attribute](#3-stackmaptableattribute)
   - [3.1. stack map frame](#31-stack-map-frame)
-  - [3.2. 定性描述](#32-%E5%AE%9A%E6%80%A7%E6%8F%8F%E8%BF%B0)
-  - [3.3. 定量表达](#33-%E5%AE%9A%E9%87%8F%E8%A1%A8%E8%BE%BE)
+  - [3.2. 定性描述](#32-%e5%ae%9a%e6%80%a7%e6%8f%8f%e8%bf%b0)
+  - [3.3. 定量表达](#33-%e5%ae%9a%e9%87%8f%e8%a1%a8%e8%be%be)
 - [4. verification_type_info](#4-verificationtypeinfo)
   - [4.1. Top_variable_info](#41-topvariableinfo)
   - [4.2. Integer_variable_info](#42-integervariableinfo)
@@ -45,7 +45,7 @@
   - [new Object](#new-object)
   - [array](#array)
   - [instanceof and checkcast](#instanceof-and-checkcast)
-- [8. StringBuilder代码优化](#8-stringbuilder%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96)
+- [8. StringBuilder代码优化](#8-stringbuilder%e4%bb%a3%e7%a0%81%e4%bc%98%e5%8c%96)
 
 <!-- /TOC -->
 
@@ -234,7 +234,7 @@ The **bytecode offset** at which a stack map frame applies is calculated by taki
 
 We say that **an instruction in the bytecode** has a corresponding **stack map frame**<sub>【注：先说结果，再说条件，if后面有两个条件】</sub> if the instruction starts at offset `i` in the `code` array of a `Code` attribute<sub>【注：第一个条件，在offset为i的地方有一个instruction】</sub>, and the `Code` attribute has a `StackMapTable` attribute whose `entries` array contains a stack map frame that applies at bytecode offset `i`<sub>【注：第二个条件，在offset为i的地方有一个stack map frame】</sub>.
 
-A **verification type** specifies **the type of either one or two locations**, where **a location** is either **a single local variable** or **a single operand stack entry**. A **verification type** is represented by a discriminated union, `verification_type_info` , that consists of **a one-byte tag**, indicating which item of the union is in use, followed by zero or more bytes, giving more information about the tag.
+A **verification type** specifies **the type of either one or two locations**, where **a location** is either **a single local variable** or **a single operand stack entry**. A **verification type** is represented by a discriminated union, `verification_type_info` , that consists of **a one-byte tag**, indicating which item of the union is in use, followed by zero or more bytes, giving more information about the `tag`.
 
 ```txt
 union verification_type_info {
