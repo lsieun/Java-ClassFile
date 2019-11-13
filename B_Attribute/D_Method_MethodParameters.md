@@ -36,11 +36,10 @@ The value of the `access_flags` item is as follows:
 - `0x1000 (ACC_SYNTHETIC)`: Indicates that the formal parameter was not explicitly or implicitly declared in source code.
 - `0x8000 (ACC_MANDATED)`: Indicates that the formal parameter was implicitly declared in source code.
 
+## How to Generate
 
+在`.class`文件中，为了生成Method的`MethodParameters`属性，需要满足这两个条件：
 
-
-
-
-
-
+- （1）在使用javac时，使用`-parameters`参数
+- （2）方法本身，至少要有一个参数；如果方法没有参数，也不会生成`MethodParameters`属性
 
